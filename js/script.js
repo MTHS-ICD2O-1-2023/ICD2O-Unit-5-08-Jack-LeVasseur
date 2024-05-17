@@ -4,11 +4,18 @@
 // Created on: March 7 2024
 // This file contains the JS functions for index.html
 
+<script>
+  function performDivision() {
+    let dividend = parseInt(document.getElementById('dividend').value);
+  let divisor = parseInt(document.getElementById('divisor').value);
+  let quotient = 0;
+  let remainder = dividend;
 
-/**
-* Do basic math.
-*/
-function doMathClicked() {
-  document.getElementById("subtract-math").innerHTML = "<p>The area is cm2 =  " + (30 - 15) + "</p>"
-  document.getElementById("multiply-math").innerHTML = "<p>The perimeter is cm = " + (4 + 4 * 2) + "</p>"
-}
+            while (remainder >= divisor) {
+    remainder -= divisor;
+  quotient++;
+            }
+
+  document.getElementById('result').innerHTML = `Quotient: ${quotient}, Remainder: ${remainder}`;
+        }
+</script>
