@@ -24,4 +24,4 @@ function myButtonClicked() {
   }
   answer = numberOfLoops
   // print answer
-  document.getElementById("answer").innerHTML = "The answer is: " + answer + " R " + remainder}
+  document.getElementById("answer").innerHTML = "Answer: " + answer + " R " + remainder}
