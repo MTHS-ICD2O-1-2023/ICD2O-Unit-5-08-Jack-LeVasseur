@@ -2,33 +2,62 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Area and Perimeter of Rectangle, in JavaScript" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Jack LeVasseur" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-deep_orange.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <title> Long divsion, with Js </title> 
-  <h1>Long Division</h1>
-  <label for="dividend">Dividend:</label>
-  <input type="number" id="dividend" min="1" required>
-  <br>
-  <label for="divisor">Divisor:</label>
-  <input type="number" id="divisor" min="1" required>
-  <br>
-  <button onclick="performDivision()">Divide</button>
-  <div class="result" id="result"></div>
+  <title> Long Division</title>
+  </head>
+  <body>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title"> Long division, With JS</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="page-content">Enter in the numbers to do Long division</div>
+        <br />
+        <!-- Simple Textfield for integers-->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <!-- input pattern attribute -->
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="first-number" />
+            <!-- mdl-textfield__label -->
+            <label class="mdl-textfield__label" for="demo-input">Divider</label>
+            <!-- class "mdl-textfield__error" -->
+            <span class="mdl-textfield__error">Input is not a number</span>
+          </div>
+          <br />
+          <div class="mdl-textfield mdl-js-textfield">
+            <!-- input pattern attribute -->
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="second-number" />
+            <!-- mdl-textfield__label -->
+            <label class="mdl-textfield__label" for="demo-input">Divisor</label>
+            <!-- class "mdl-textfield__error" -->
+            <span class="mdl-textfield__error">Input is not a number</span>
+          </div>
+          <br />
+          <!-- Accent-colored raised button with ripple -->
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="myButtonClicked()">
+            Calculate
+          </button>
+        </form>
+        <br />
+        <br />
+        <div class="page-content-answer">
+          <div id="answer"></div>
+        </div>
+      </main>
+    </div>
   </body>
   </html>
-  <div class="page-content">420-69 = 351 first time</div>
-  <div class="page-content">351-69 = 282 second time</div>
-  <div class="page-content">351-69 = 213 third time</div>
-  <div class="page-content">213-69 = 144 froth time</div>
-  <div class="page-content">144-69 = 75 fifth time</div>
-  <div class="page-content">75-69 = 6 sixth time</div>
-  <div class ="page-content">therefore 420/69 = 6 R 6</div>

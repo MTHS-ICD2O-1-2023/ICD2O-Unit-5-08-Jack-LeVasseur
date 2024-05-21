@@ -1,21 +1,27 @@
 // Copyright (c) 2020 Mr. Coxall All rights reserved
 //
 // Created by: Jack LeVasseur
-// Created on: March 7 2024
+// Created on: Ma7 4, 2024
 // This file contains the JS functions for index.html
 
-<script>
-  function performDivision() {
-    let dividend = parseInt(document.getElementById('dividend').value);
-  let divisor = parseInt(document.getElementById('divisor').value);
-  let quotient = 0;
-  let remainder = dividend;
-
-            while (remainder >= divisor) {
-    remainder -= divisor;
-  quotient++;
-            }
-
-  document.getElementById('result').innerHTML = `Quotient: ${quotient}, Remainder: ${remainder}`;
-        }
-</script>
+function myButtonClicked() {
+  // define numbers
+  const firstNumber = parseFloat(document.getElementById("first-number").value)
+  const secondNumber = parseFloat(document.getElementById("second-number").value)
+  let dividend = firstNumber
+  let divisor = secondNumber
+  let remainder = 0
+  // divide
+  let numberOfLoops = 0
+  let answer = 0
+  while (true) {
+    if (dividend < divisor) {
+      remainder = dividend
+      break
+    }
+    dividend = dividend - divisor
+    numberOfLoops++
+  }
+  answer = numberOfLoops
+  // print answer
+  document.getElementById("answer").innerHTML = "The answer is: " + answer + " R " + remainder}

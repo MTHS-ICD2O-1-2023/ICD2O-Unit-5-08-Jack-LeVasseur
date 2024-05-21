@@ -2,40 +2,26 @@
 * Created on: May 13, 2024
 * This file contains the CSS for index.html
 */
+ .mdl-layout__header-row {
+   align-items: center;
+   justify-content: center;
+ }
 
-.mdl-layout__header-row {
-  justify-content: center;
-  padding: 0;
-}
 
-.mdl-layout__content {
-  padding-left: 15pt;
-  padding-right: 15pt;
-  padding-top: 15pt;
-}
+ .mdl-layout__content {
+   padding-left: 15pt;
+   padding-right: 15pt;
+   padding-top: 15pt;
+ }
 
-.mdl-textfield__error {
-  color: lightgreen;
-}
 
-.page-content {
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.25rem;
-}
+ body {
+   background-color: rgb(255, 85, 0);
+ }
 
-.page-content-answer {
-  color: rgb(0 0 0);
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.25rem;
-}
-
-img {
-  height: auto;
-  width: 250px;
-  float: right;
-}
-
-body {
-  background-color: cornflowerblue;
-}
+ p {
+   color: rgb(41, 37, 37);
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 1.5rem;
+   padding-top: 5pt;
+ }
